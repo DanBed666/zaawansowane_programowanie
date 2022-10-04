@@ -1,0 +1,1 @@
+nowa wersja plku test.txt dla gałęzi "test2"
