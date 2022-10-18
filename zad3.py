@@ -18,7 +18,7 @@ class House(Property):
         self.plot = plot
 
     def __str__(self):
-        return f"{super().__str__()} Dzialka {self.plot}"
+        return f"{super().__str__()}, Dzialka: {self.plot}"
 
 
 class Flat(Property):
@@ -28,7 +28,7 @@ class Flat(Property):
         self.floor = floor
 
     def __str__(self):
-        return f"{super().__str__()} Dzialka {self.floor}"
+        return f"{super().__str__()}, Piętro: {self.floor}"
 
 
 if __name__ == '__main__':
