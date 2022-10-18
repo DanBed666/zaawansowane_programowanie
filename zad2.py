@@ -8,7 +8,7 @@ class Library:
         self.phone = phone
 
     def __str__(self):
-        return f"Biblioteka w mieście {self.city} na ulicy {self.street}, kod pocztowy {self.zip_code} otwarta przez {self.open_hours} godzin" \
+        return f"Biblioteka w mieście {self.city} na ulicy {self.street}, kod pocztowy {self.zip_code} otwarta w godzinach {self.open_hours} godzin" \
                f", numer telefonu to {self.phone}"
 
 
@@ -71,8 +71,8 @@ class Order:
 
 if __name__ == '__main__':
 
-    l1 = Library("Katowice", "Zielona", "66-420", 8, "666123909")
-    l2 = Library("Zabrze", "Czerwona", "66-421", 9, "696180909")
+    l1 = Library("Katowice", "Zielona", "66-420", "8-19", "666123909")
+    l2 = Library("Zabrze", "Czerwona", "66-421", "9-20", "696180909")
 
     b1 = Book(l1, "16/05/2001", "Robert", "Lewandowski", 198)
     b2 = Book(l2, "17/05/2003", "Mirosław", "Klose", 168)
