@@ -18,6 +18,7 @@ class Brewery:
 
 
 def get_breweries(number):
+
     req = requests.get(f"https://api.openbrewerydb.org/"
                        f"breweries/random?size={number}").json()
     breweries_list = []
