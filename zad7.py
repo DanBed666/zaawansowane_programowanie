@@ -25,7 +25,7 @@ def get_breweries(number):
 
     for brewery in req:
         new_brewery = Brewery(brewery["name"], brewery["brewery_type"],
-                              brewery["street"], brewery["street"],
+                              brewery["street"], brewery["city"],
                               brewery["state"], brewery["phone"])
         breweries_list.append(new_brewery)
 
