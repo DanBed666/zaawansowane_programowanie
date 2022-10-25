@@ -4,7 +4,7 @@ import magazine.utils as utils
 class Product:
 
     def __init__(self):
-        self.nazwa = utils.losowywyraz()
+        self.nazwa = utils.losowy_wyraz()
         self.czas_ladowania = utils.czas_ladowania()
 
     def __str__(self):
