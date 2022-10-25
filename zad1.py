@@ -15,5 +15,3 @@ if __name__ == '__main__':
     print(s1.is_passed())
     s2 = Student("Krzychu", 76)
     print(s2.is_passed())
-
-
