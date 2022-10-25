@@ -5,6 +5,7 @@ def zad3(n):
     else:
         return "Liczba nieparzysta!"
 
+
 if __name__ == '__main__':
 
     print(zad3(6))
