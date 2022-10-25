@@ -31,12 +31,3 @@ class Flat(Property):
     def __str__(self):
         return f"{super().__str__()}, Piętro: {self.floor}"
 
-
-if __name__ == '__main__':
-
-    p = Property("Kato", 8, 2000, "Zielona 13")
-    print(p.__str__())
-    h = House("Gleiwitz", 5, 2500, "Pomidorowa 8", 50)
-    print(h.__str__())
-    f = Flat("Gdynia", 6, 8000, "Arki Noego 66", 13)
-    print(f.__str__())
