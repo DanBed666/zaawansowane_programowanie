@@ -5,6 +5,8 @@ class Student:
         self.marks = marks
 
     def is_passed(self):
-
         return self.marks > 50
+
+    def __str__(self):
+        return f"Imie {self.name} z ocena z jakiegos tam testu {self.marks}"
 
