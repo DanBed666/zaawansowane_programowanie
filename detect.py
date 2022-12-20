@@ -2,12 +2,10 @@ import base64
 
 import cv2 as cv
 from PIL import Image
-from matplotlib import cm
-import numpy as np
 from io import BytesIO
 
-def pict(name):
 
+def pict(name):
     countx = []
 
     cvNet = cv.dnn.readNetFromTensorflow('frozen_inference_graph.pb', 'graph.pbtxt')
@@ -40,11 +38,3 @@ def pict(name):
     print(type(img_str))
 
     return len(countx), img_str
-
-
-
-
-
-
-
-

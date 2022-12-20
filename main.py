@@ -1,10 +1,8 @@
-from PIL import Image
 from fastapi import FastAPI, Request, Form, UploadFile, File
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 import shutil
 import detect
-import base64
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
@@ -43,7 +41,3 @@ async def root(request: Request, file: UploadFile = File(...)):
         return templates.TemplateResponse("result.html", {"request": request, "people": people, "myImage": img})
     except (AttributeError, FileNotFoundError):
         return templates.TemplateResponse("index.html", {"request": request, "message": "Niepoprawny format pliku!"})
-
-
-
-
