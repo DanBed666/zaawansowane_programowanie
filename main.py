@@ -24,9 +24,10 @@ async def root(request: Request, file: UploadFile = File(...)):
         people, img = detect.pict(buffer.name)
 
         return templates.TemplateResponse("result.html", {"request": request, "people": people, "myImage": img})
-    except (AttributeError, FileNotFoundError):
+    except AttributeError:
         return templates.TemplateResponse("index.html", {"request": request, "message": "Niepoprawny format pliku!"})
-
+    except FileNotFoundError:
+        return templates.TemplateResponse("index.html", {"request": request, "message": "Brak przesłanego pliku!"})
 
 @app.get("/result", response_class=HTMLResponse)
 async def root(request: Request, file: UploadFile = File(...)):
@@ -39,5 +40,7 @@ async def root(request: Request, file: UploadFile = File(...)):
         people, img = detect.pict(buffer.name)
 
         return templates.TemplateResponse("result.html", {"request": request, "people": people, "myImage": img})
-    except (AttributeError, FileNotFoundError):
+    except AttributeError:
         return templates.TemplateResponse("index.html", {"request": request, "message": "Niepoprawny format pliku!"})
+    except FileNotFoundError:
+        return templates.TemplateResponse("index.html", {"request": request, "message": "Brak przesłanego pliku!"})

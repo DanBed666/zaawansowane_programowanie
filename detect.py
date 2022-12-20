@@ -25,7 +25,7 @@ def pict(name):
             right = detection[5] * cols
             bottom = detection[6] * rows
             countx.append(score)
-            cv.rectangle(img, (int(left), int(top)), (int(right), int(bottom)), (0, 100, 75), thickness=4)
+            cv.rectangle(img, (int(left), int(top)), (int(right), int(bottom)), (255, 0, 0), thickness=4)
             print(score)
 
     print(type(img))
